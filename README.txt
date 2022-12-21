@@ -1,5 +1,10 @@
 Utilities for .pgm files.
 
+This was the coursework for comp1921 - programming project. We had to code a series of utilites for .pgm files and create a makefile and a test script.
+PgmEcho will just create an exact replica of the input image. pgmCompare will logically compare two .pgm files. Pgmb2a and a2b converts .pgm files between ASCII to Binary. PgmReduce will reduce the .pgm file by the given reduction factor.
+
+Instructions:
+
 To make and execute pgmEcho type:
 	make pgmEcho
 	./pgmEcho <input_image.pgm> <output_image.pgm>
