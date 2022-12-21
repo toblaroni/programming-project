@@ -1,0 +1,9 @@
+TEST PLAN
+
+Scripts that input less than and greater than 3 command line arguments. Expected output: return value of 1 with the correct error code (For pgmEcho, pgmComp, pgmReduce, pgmTile). 
+Scripts that input incorrect file names, with the right amount of command line arguments. Checking for the correct Error string and return value.
+Alter the input pgm file with an invalid magic number, Comment Line, Dimensions, Max Grey value, faulty layout and wrong data values. Check for correct error code and return value.
+
+Now, input valid pgm files and check that the program does as it's supposed to. After any program runs successfuly, return code should be 0. pgmEcho should output ECHOED when complete, as well as the input and output files being identical. pgmCompare should outcome IDENTICAL when both files are the same, DIFFERENT when the files are different. pgma2b and pgmb2a should output CONVERTED when successful and the output file should be a valid .pgm file. pgmReduce outputs REDUCED when successfuly run, the output file should be a valid .pgm file, with the width and height being the correct values based on the original width and height. pgmTile should output TILED when correct, with the correct number of output files outputed of the right width and height. pgmAssemble should output ASSEMBLED, with a valid .pgm file being output.
+
+I have also made lots of faulty images, I can then try and run each executable and see whether they output the correct error code.

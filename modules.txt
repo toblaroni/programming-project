@@ -1,0 +1,22 @@
+MODULES
+
+validate.c, validate.h
+
+Used in pgmEcho.c, pgmComp.c, pgmReduce.c, pgmTiles.c and pgmAssemble.c.
+First checks to see if the file opens.
+Contains functions to check that the magic number is valid. This means it's either P5 or P2.
+Also contains a function to test the width and height to see if they're within the minimum and maximum values. 
+These checks should be in place for both ascii and binary pgm files.
+
+
+pgmStruct.c, pgmStruct.h
+
+Used in validate.c, pgmEcho.c, pgmComp.c, pgmReduce.c, pgmTiles.c and pgmAssemble.c.
+Contains a struct that contains all information about a given .pgm file. This means it includes the magic number, the width and height, the max grey value and then a 2D array of grey values.
+It should also include whitespace and comments so that when the image is "echoed" they're the same.
+Contains function to output a pgmFile, given a pgmData as input.
+
+rwPgm.c rwPgm.h
+
+Used in pgmEcho.c, pgmComp.c, pgmReduce.c, pgmTiles.c and pgmAssemble.c
+Used to read in and write binary and ascii pgm files.
